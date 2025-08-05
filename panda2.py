@@ -14,7 +14,7 @@ try:
 #------------------------------------------------------
     #darabszám feltétel szerint                                
     #--SQL-ben így néz ki:-->  SELECT Kezelo, COUNT(*) FROM munka WHERE Eredmeny = 'Megfelelt' AND GyEv > 2012 GROUP BY Kezelo
-    print(df.where((df['Eredmeny'] == 'Megfelelt') & (df['GyEv'] > 2012)).groupby('Kezelo')['Kezelo'].count())
+    #print(df.where((df['Eredmeny'] == 'Megfelelt') & (df['GyEv'] > 2012)).groupby('Kezelo')['Kezelo'].count())
     #print(df['Kezelo'].value_counts())
 #-------------------------------------------------------
     #adatok szürése ~WHERE

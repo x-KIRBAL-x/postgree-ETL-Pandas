@@ -1,4 +1,4 @@
-import datetime
+#import datetime
 from sqlalchemy import create_engine
 from sqlalchemy.engine import URL 
 import pandas as pd
@@ -26,7 +26,7 @@ def extract():
         src_cursor.execute(""" SELECT t.name AS table_name FROM sys.tables t WHERE t.name IN ('DimProduct','DimProductSubcategory','DimProductSubcategory','DimProductCategory','DimSalesTerritory','FactInternetSales')""")
         src_tables = src_cursor.fetchall()
         for tbl in src_tables:
-            #print(tbl)
+            #print(tbl[0]) #tbl egy tömb aminek az első elemét kérem le a tbl[0] nincs az aktuális for -ban második eleme
             df = pd.read_sql_query(f'select * FROM {tbl[0]}', src_conn)
             load(df, tbl[0])
 
