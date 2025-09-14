@@ -32,19 +32,21 @@ def extract():
                 # checking if it is a file
                 if os.path.isfile(f):
                     df = pd.read_excel(f)
-                    # call to load
+                    #call to load
                     #load(df, file_wo_ext)
 
         #df.info()
         #print(type(df))
-        #print(df['Datum'])
-        de = pd.DataFrame(df)
+        print(df['Datum'])
+        #de = pd.DataFrame(df)
         #de.info()
         
-        print(pd.read_sql_query('Select * FROM df', df))           
+
+        #print(pd.read_sql_query('Select * FROM df', df))           
     except Exception as e:
        # eml.send_mail(to, "File Upload, Data extract error: ", f"Data extract error: File location {dir}" + str(e))
         print("Data extract error: " + str(e))
+        
 
 #load data to postgres
 def load(df, tbl):
