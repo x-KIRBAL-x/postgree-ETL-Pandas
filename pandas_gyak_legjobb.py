@@ -38,13 +38,12 @@ def extract():
         #df.info()
         df2 = df.dropna()
         df_new = df2.loc[0:,'Primarykey':'Foreignkey']
-        #df_new['Date'] = pd.to_datetime(df_new['Date'], format='mixed').dt.date
-        #df_new['Date'] = pd.to_datetime(df_new['Date'], format='mixed')
-        #df_new.info()
-        #print(df_new.to_string())
         load(df_new, file_wo_ext + "_11")
         df_new = df2.loc[0:,'Primarykey2':'Calories']
         load(df_new, file_wo_ext + "_22")
+        #df_new.info()
+        #print(df_new.to_string())
+        
                 
         
 
