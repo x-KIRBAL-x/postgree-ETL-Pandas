@@ -12,7 +12,7 @@ uid = os.environ['PGUID']
 server = "localhost"
 db = "AdventureWorks"
 port = "5432"
-dir = r'\Accounts\pandas_gyak'
+dir = r'\postgres\pandas_gyak'
 #to = 'youremail@domain.com'
 
 #extract data from sql server

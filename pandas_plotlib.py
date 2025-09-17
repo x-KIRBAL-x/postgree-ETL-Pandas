@@ -11,7 +11,7 @@ import sys
 import os
 
 #get password from environmnet var
-dir = r'\Accounts\pandas_plot'
+dir = r'\postgres\pandas_plot'
 #to = 'youremail@domain.com'
 
 #extract data from sql server
