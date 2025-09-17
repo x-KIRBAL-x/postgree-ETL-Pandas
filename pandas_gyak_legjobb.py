@@ -13,7 +13,7 @@ server = "localhost"
 db = "AdventureWorks"
 port = "5432"
 dir = r'\postgres\pandas_gyak'
-#to = 'youremail@domain.com'
+#to = 'youremail@domain.com+'
 
 #extract data from sql server
 def extract():
